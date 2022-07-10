@@ -20,9 +20,13 @@ jobs:
         packages: make
     - name: configure
       run: CHERE_INVOKING=1 CYGWIN_NOWINPATH=1 bash --login -c './configure'
+      shell: bash
     - name: make
       run: CHERE_INVOKING=1 CYGWIN_NOWINPATH=1 bash --login -c 'make'
+      shell: bash
     - name: make check
       run: CHERE_INVOKING=1 CYGWIN_NOWINPATH=1 bash --login -c 'make check'
+      shell: bash
     - name: make distcheck
       run: CHERE_INVOKING=1 CYGWIN_NOWINPATH=1 bash --login -c 'make distcheck'
+      shell: bash
