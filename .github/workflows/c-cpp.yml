@@ -17,7 +17,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: cygwin/cygwin-install-action@master
       with:
-        packages: make, gcc
+        packages: cygwin-devel
     - name: configure
       run: CHERE_INVOKING=1 CYGWIN_NOWINPATH=1 bash --login -c './configure'
       shell: bash
